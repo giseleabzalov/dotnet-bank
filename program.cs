@@ -1,17 +1,9 @@
-﻿
-// Console.WriteLine("Hello, World!");
+﻿BankAccount newaccount = new SavingsAccount("Jim", 250);
 
-BankAccount newaccount = new BankAccount();
+Console.WriteLine(newaccount.customerName + "'s starting balance is $" + newaccount.getBalance());
 
-if (newaccount.typeOfAccount == "checking")
-{
-    // balance = balance + 100;
-    newaccount.balance += 100;
-}
-Console.WriteLine(newaccount.customerName + "'s balance is $" + newaccount.balance);
+// he added 100 more
 
-// int balance2 = 300;
-// Console.WriteLine(balance2);
+newaccount.deposit(-100);
 
-// float balance1 = 300.01f;
-// Console.WriteLine(balance1);
+Console.WriteLine(newaccount.customerName + "'s now balance is $" + newaccount.getBalance());
